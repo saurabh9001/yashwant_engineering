@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Yashwant Engineering - Handcrafted metal products, custom trolleys, and metalwork in Palus. Quality craftsmanship for industrial and commercial needs." />
+    <title>Yashwant Engineering — Products</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrap header-inner">
+        <div class="logo">
+          <h1>Yashwant Engineering</h1>
+          <p>Handcrafted Metal Products</p>
+        </div>
+        <nav class="nav">
+          <a href="#products" class="active">Products</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="cta-btn" href="https://www.instagram.com/yashwant__engineering_palus/" target="_blank" rel="noopener">Order Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap hero-content">
+        <h2>Premium Handcrafted Metal Products</h2>
+        <p>Custom trolleys, industrial equipment, and metalwork crafted with precision in Palus, India</p>
+        <a href="#products" class="hero-cta">View Our Products</a>
+      </div>
+      <div class="hero-bg"></div>
+    </section>
+
+    <main class="wrap main-content">
+      <section id="products" class="products-section">
+        <div class="section-header">
+          <h2>Our Products</h2>
+          <p>Explore our collection of handcrafted metal products. Each item is made with quality materials and attention to detail.</p>
+        </div>
+
+        <div class="product-filters">
+          <button class="filter-btn active" data-filter="all">All Products</button>
+          <button class="filter-btn" data-filter="trolleys">Trolleys</button>
+          <button class="filter-btn" data-filter="equipment">Equipment</button>
+          <button class="filter-btn" data-filter="custom">Custom Work</button>
+        </div>
+
+        <div id="products-grid" class="products-grid">
+          <!-- Products populated by JavaScript -->
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Why Choose Yashwant Engineering?</h2>
+            <ul class="features-list">
+              <li><strong>Quality Materials:</strong> We use only premium metals and materials</li>
+              <li><strong>Custom Design:</strong> Tailored solutions for your specific needs</li>
+              <li><strong>Expert Craftsmanship:</strong> Years of experience in metalworking</li>
+              <li><strong>Timely Delivery:</strong> Reliable service and quick turnaround</li>
+              <li><strong>Competitive Pricing:</strong> Value for money without compromising quality</li>
+            </ul>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">100+</div>
+              <div class="stat-label">Products Delivered</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Happy Customers</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="contact-content">
+          <div class="contact-info">
+            <h2>Ready to Order?</h2>
+            <p>Get in touch for custom quotes, bulk orders, or inquiries about our products.</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <div>
+                  <strong>Location</strong><br>
+                  Palus, Maharashtra, India
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📱</span>
+                <div>
+                  <strong>Instagram</strong><br>
+                  <a href="https://www.instagram.com/yashwant__engineering_palus/" target="_blank" rel="noopener">@yashwant__engineering_palus</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">⏰</span>
+                <div>
+                  <strong>Business Hours</strong><br>
+                  Monday - Saturday: 9 AM - 6 PM
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <h3>Send us a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="product">Product Interest</label>
+              <select id="product" name="product">
+                <option value="">Select a product type</option>
+                <option value="trolley">Trolley</option>
+                <option value="equipment">Industrial Equipment</option>
+                <option value="custom">Custom Metalwork</option>
+                <option value="repair">Repair Service</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="4" required placeholder="Tell us about your requirements..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div id="productModal" class="product-modal" aria-hidden="true">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-content">
+        <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+        <div class="modal-body">
+          <img id="modalImg" src="" alt="Product image" />
+          <div class="modal-info">
+            <h3 id="modalTitle">Product Title</h3>
+            <p id="modalDesc">Product description and details.</p>
+            <div class="modal-actions">
+              <a href="https://www.instagram.com/yashwant__engineering_palus/" target="_blank" rel="noopener" class="order-btn">Order on Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Yashwant Engineering</h3>
+            <p>Quality metalwork and handcrafted products in Palus, India.</p>
+            <a href="https://www.instagram.com/yashwant__engineering_palus/" target="_blank" rel="noopener" class="social-link">Follow us on Instagram</a>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li>Custom Metalwork</li>
+              <li>Trolley Manufacturing</li>
+              <li>Equipment Repair</li>
+              <li>Design Consultation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <small>© 2025 Yashwant Engineering. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
