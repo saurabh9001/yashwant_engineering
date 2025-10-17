@@ -3,30 +3,15 @@ const products = [
   // Trolleys
   { id: 1, name: "Heavy Duty Industrial Trolley", category: "trolleys", image: "IMG_8197.jpg", description: "Sturdy metal trolley designed for industrial use with heavy load capacity." },
   { id: 2, name: "Custom Platform Trolley", category: "trolleys", image: "IMG_8190.jpg", description: "Custom-built platform trolley with reinforced frame and smooth wheels." },
-  { id: 3, name: "Multi-Level Storage Trolley", category: "trolleys", image: "IMG_8189.jpg", description: "Multi-tier trolley perfect for organized storage and transport." },
-  { id: 4, name: "Welded Frame Trolley", category: "trolleys", image: "IMG_8191.jpg", description: "Professionally welded frame trolley with durable construction." },
-  { id: 5, name: "Industrial Cart System", category: "trolleys", image: "IMG_8192.jpg", description: "Complete cart system designed for manufacturing environments." },
 
   // Equipment
-  { id: 6, name: "Metal Fabrication Frame", category: "equipment", image: "IMG_8106.jpg", description: "Custom metal frame for industrial equipment and machinery." },
-  { id: 7, name: "Welding Assembly", category: "equipment", image: "IMG_8107.jpg", description: "Precision welding assembly for industrial applications." },
-  { id: 8, name: "Structural Support System", category: "equipment", image: "IMG_8108.jpg", description: "Heavy-duty structural support system with reinforced joints." },
-  { id: 9, name: "Equipment Mounting Frame", category: "equipment", image: "IMG_8109.jpg", description: "Custom mounting frame for industrial equipment installation." },
-  { id: 10, name: "Metal Processing Unit", category: "equipment", image: "IMG_8110.jpg", description: "Specialized metal processing unit with precision components." },
+  { id: 3, name: "Metal Fabrication Frame", category: "equipment", image: "IMG_8106.jpg", description: "Custom metal frame for industrial equipment and machinery." },
 
   // Custom Work
-  { id: 11, name: "Artisan Metal Sculpture", category: "custom", image: "IMG_4500.jpg", description: "Handcrafted metal sculpture with intricate design work." },
-  { id: 12, name: "Decorative Metal Work", category: "custom", image: "IMG_4502.JPG", description: "Custom decorative metal pieces for architectural applications." },
-  { id: 13, name: "Precision Metal Cutting", category: "custom", image: "IMG_4503.jpg", description: "Precision cut metal components with exact specifications." },
-  { id: 14, name: "Metal Art Installation", category: "custom", image: "IMG_4504.jpg", description: "Large-scale metal art installation with custom design." },
-  { id: 15, name: "Specialty Metal Fabrication", category: "custom", image: "IMG_4899.jpg", description: "Specialty fabrication work for unique requirements." },
+  { id: 4, name: "Artisan Metal Sculpture", category: "custom", image: "IMG_4500.jpg", description: "Handcrafted metal sculpture with intricate design work." },
 
-  // Additional products from the gallery
-  { id: 16, name: "Industrial Metal Structure", category: "equipment", image: "IMG_5785.jpg", description: "Large industrial metal structure with robust construction." },
-  { id: 17, name: "Fabrication Workshop Piece", category: "custom", image: "IMG_5786.jpg", description: "Workshop fabrication piece showcasing metalworking expertise." },
-  { id: 18, name: "Metal Assembly Component", category: "equipment", image: "IMG_5787.jpg", description: "Complex metal assembly component for industrial use." },
-  { id: 19, name: "Custom Metal Frame", category: "trolleys", image: "IMG_5788.jpg", description: "Custom designed metal frame for specialized applications." },
-  { id: 20, name: "Precision Engineered Part", category: "equipment", image: "IMG_5789.jpg", description: "Precision engineered metal part with tight tolerances." }
+  // Additional products
+  { id: 5, name: "Industrial Metal Structure", category: "equipment", image: "IMG_5785.jpg", description: "Large industrial metal structure with robust construction." }
 ];
 
 let currentFilter = 'all';
@@ -236,10 +221,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add loading animation to product images
   document.querySelectorAll('.product-image img').forEach(img => {
-    img.addEventListener('load', () => {
-      img.style.opacity = '1';
-    });
     img.style.opacity = '0';
     img.style.transition = 'opacity 0.3s';
+    // When image finishes loading, fade it in. If it's already loaded (from cache), show immediately.
+    img.addEventListener('load', () => { img.style.opacity = '1'; });
+    if (img.complete && img.naturalWidth !== 0) {
+      // already loaded (cached) — ensure it's visible
+      img.style.opacity = '1';
+    }
   });
 });
