@@ -219,6 +219,22 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', handleNavClick);
   });
 
+  // Mobile nav toggle
+  const mobileToggle = document.getElementById('mobileNavToggle');
+  const navWrap = document.querySelector('.nav-wrap');
+  if (mobileToggle && navWrap) {
+    mobileToggle.addEventListener('click', () => {
+      navWrap.classList.toggle('open');
+    });
+
+    // Close mobile nav when a link is clicked
+    navWrap.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navWrap.classList.remove('open');
+      });
+    });
+  }
+
   // Add loading animation to product images
   document.querySelectorAll('.product-image img').forEach(img => {
     img.style.opacity = '0';
