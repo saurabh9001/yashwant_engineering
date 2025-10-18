@@ -71,6 +71,11 @@ p{margin-bottom:1rem}
 .product-title{font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:8px}
 .product-desc{color:var(--text-light);font-size:0.9rem;margin:0}
 
+.product-meta{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}
+.meta-item{background:rgba(15,23,42,0.04);padding:6px 8px;border-radius:6px;font-size:12px;color:var(--text-light);border:1px solid rgba(0,0,0,0.03)}
+.product-footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.price-tag{background:linear-gradient(90deg,var(--secondary),var(--primary));color:#fff;padding:8px 12px;border-radius:8px;font-weight:700;font-size:0.95rem}
+
 /* About Section */
 .about-section{margin-bottom:60px}
 .about-content{display:grid;grid-template-columns:2fr 1fr;gap:40px}

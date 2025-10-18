@@ -1,13 +1,13 @@
 // Product data mapped to `img/<id>/` folders provided by the user
 const products = [
-  { id: 1, name: "Phalka Trolly", category: "trolleys", image: "img/1pt/photo_6312248491190717653_y.jpg", description: "Size: 6 x 4 — Blue. Price: ₹18000 + ₹20000" },
-  { id: 2, name: "Box Trolly", category: "trolleys", image: "img/2bt/photo_6312248491190717672_y.jpg", description: "Size: 6 x 4 — Blue. Price: ₹17000 + ₹19000" },
-  { id: 3, name: "Tal Trolly", category: "trolleys", image: "img/3tt/photo_6312248491190717678_y.jpg", description: "Size: 6 x 4 — Blue. Price: ₹16000 + ₹18000" },
-  { id: 4, name: "Patte Trolly", category: "trolleys", image: "img/4pat/photo_6312248491190717689_y.jpg", description: "Size: 6 x 4 — Blue. Price: ₹12000 + ₹16000" },
-  { id: 5, name: "Khurt 5 Phane", category: "trolleys", image: "img/5k5p/photo_6312248491190717700_y.jpg", description: "Size: 6 x 4 — Blue. Price: ₹15000 + ₹18000" },
-  { id: 6, name: "Khurut 7 Phane", category: "trolleys", image: "img/6k7p/photo_6312248491190717700_y.jpg", description: "Size: 3 x 5 — Blue. Price: ₹15000 + ₹18000" },
-  { id: 7, name: "Grapes Gada", category: "trolleys", image: "img/7gg/photo_6312248491190717716_y.jpg", description: "Size: 3 x 7 — Blue. Price: ₹10000 + ₹12000" },
-  { id: 8, name: "Veetbatii Gada", category: "trolleys", image: "img/8vg/photo_6312248491190717725_y.jpg", description: "Size: 3 x 8 — Blue. Price: ₹11000 + ₹14000" }
+  { id: 1, code: '1pt', name: "Phalka Trolly", category: "trolleys", image: "img/1pt/photo_6312248491190717653_y.jpg", size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 18000, priceHigh: 20000, description: '' },
+  { id: 2, code: '2bt', name: "Box Trolly", category: "trolleys", image: "img/2bt/photo_6312248491190717672_y.jpg", size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 17000, priceHigh: 19000, description: '' },
+  { id: 3, code: '3tt', name: "Tal Trolly", category: "trolleys", image: "img/3tt/photo_6312248491190717678_y.jpg", size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 16000, priceHigh: 18000, description: '' },
+  { id: 4, code: '4pat', name: "Patte Trolly", category: "trolleys", image: "img/4pat/photo_6312248491190717689_y.jpg", size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 12000, priceHigh: 16000, description: '' },
+  { id: 5, code: '5k5p', name: "Khurt 5 Phane", category: "trolleys", image: "img/5k5p/photo_6312248491190717700_y.jpg", size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 15000, priceHigh: 18000, description: '' },
+  { id: 6, code: '6k7p', name: "Khurut 7 Phane", category: "trolleys", image: "img/6k7p/photo_6312248491190717700_y.jpg", size: '3 x 5', color: 'Blue', quantity: 1, priceLow: 15000, priceHigh: 18000, description: '' },
+  { id: 7, code: '7gg', name: "Grapes Gada", category: "trolleys", image: "img/7gg/photo_6312248491190717716_y.jpg", size: '3 x 7', color: 'Blue', quantity: 1, priceLow: 10000, priceHigh: 12000, description: '' },
+  { id: 8, code: '8vg', name: "Veetbatii Gada", category: "trolleys", image: "img/8vg/photo_6312248491190717725_y.jpg", size: '3 x 8', color: 'Blue', quantity: 1, priceLow: 11000, priceHigh: 14000, description: '' }
 ];
 
 let currentFilter = 'all';
@@ -17,13 +17,22 @@ function createProductCard(product) {
   const card = document.createElement('div');
   card.className = 'product-card';
   card.setAttribute('data-category', product.category);
+  const priceText = product.priceLow && product.priceHigh ? `₹${product.priceLow.toLocaleString()} - ₹${product.priceHigh.toLocaleString()}` : '';
   card.innerHTML = `
     <div class="product-image">
       <img src="${product.image}" alt="${product.name}" loading="lazy">
     </div>
     <div class="product-info">
       <h3 class="product-title">${product.name}</h3>
+      <div class="product-meta">
+        <span class="meta-item">Size: ${product.size}</span>
+        <span class="meta-item">Color: ${product.color}</span>
+        <span class="meta-item">Qty: ${product.quantity}</span>
+      </div>
       <p class="product-desc">${product.description}</p>
+      <div class="product-footer">
+        <div class="price-tag">${priceText}</div>
+      </div>
     </div>
   `;
 
@@ -61,8 +70,16 @@ function openProductModal(product) {
   const desc = document.getElementById('modalDesc');
 
   img.src = product.image;
-  title.textContent = product.name;
-  desc.textContent = product.description;
+  title.textContent = `${product.name} (${product.code})`;
+  // build details
+  const priceText = product.priceLow && product.priceHigh ? `Price: ₹${product.priceLow.toLocaleString()} - ₹${product.priceHigh.toLocaleString()}` : '';
+  desc.innerHTML = `
+    <strong>Size:</strong> ${product.size}<br>
+    <strong>Color:</strong> ${product.color}<br>
+    <strong>Quantity:</strong> ${product.quantity}<br>
+    <strong>${priceText}</strong><br>
+    <p style="margin-top:8px;color:var(--text-light);">${product.description || ''}</p>
+  `;
 
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
