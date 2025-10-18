@@ -9,21 +9,47 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
   </head>
   <body>
+    <div class="topbar">
+      <div class="wrap topbar-inner">
+        <div class="topbar-left">
+          <strong>यशवंत इंजिनिअरिंग अँड वेल्डींग वर्क्स</strong>
+          <span class="topbar-sub">(Yashwant Engineering &amp; Welding Works)</span>
+          <div class="topbar-address">पलूस-तासगांव रोड, लाईफकेअर हॉस्पिटल समोर, पलूस, जि. सांगली, महाराष्ट्र</div>
+        </div>
+        <div class="topbar-right">
+          <a href="tel:+919960022128">📞 9960022128</a>
+          <span>•</span>
+          <a href="tel:+919359813768">📞 9359813768</a>
+          <span>•</span>
+          <a href="https://www.instagram.com/yashwant__engineering_palus/" target="_blank" rel="noopener">Instagram @yashwant__engineering_palus</a>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="wrap header-inner">
         <div class="logo">
-          <h1>Yashwant Engineering</h1>
-          <p>Handcrafted Metal Products</p>
+          <a href="/" aria-label="Yashwant Engineering home">
+            <img src="img/logo/logo.jpg" alt="Yashwant Engineering logo" class="site-logo" />
+          </a>
+          <p data-i18n="logo_subtitle">Handcrafted Metal Products</p>
+        </div>
+        <div class="lang-select">
+          <label for="langSelect" class="visually-hidden">Language</label>
+          <select id="langSelect" aria-label="Select language">
+            <option value="mr">मराठी</option>
+            <option value="hi">हिन्दी</option>
+            <option value="en">English</option>
+          </select>
         </div>
         <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Toggle navigation">
           ☰
         </button>
         <div class="nav-wrap">
           <nav class="nav">
-            <a href="#products" class="active">Products</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a class="cta-btn" href="https://www.instagram.com/yashwant__engineering_palus/" target="_blank" rel="noopener">Order Now</a>
+            <a href="#products" class="active" data-i18n="nav_products">Products</a>
+            <a href="#about" data-i18n="nav_about">About</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
+            <a class="cta-btn" href="https://www.instagram.com/yashwant__engineering_palus/" target="_blank" rel="noopener" data-i18n="order_now">Order Now</a>
           </nav>
         </div>
       </div>
@@ -31,25 +57,26 @@
 
     <section class="hero">
       <div class="wrap hero-content">
-        <h2>Premium Handcrafted Metal Products</h2>
-        <p>Custom trolleys, industrial equipment, and metalwork crafted with precision in Palus, India</p>
-        <a href="#products" class="hero-cta">View Our Products</a>
+  <h2 data-i18n="hero_title">Premium Handcrafted Metal Products</h2>
+  <p data-i18n="hero_desc">Custom trolleys, industrial equipment, and metalwork crafted with precision in Palus, India</p>
+  <a href="#products" class="hero-cta" data-i18n="view_products">View Our Products</a>
       </div>
+      <img id="heroSlideshowImg" class="hero-slideshow-img" src="" alt="Showcase" aria-hidden="true" />
       <div class="hero-bg"></div>
     </section>
 
     <main class="wrap main-content">
       <section id="products" class="products-section">
         <div class="section-header">
-          <h2>Our Products</h2>
-          <p>Explore our collection of handcrafted metal products. Each item is made with quality materials and attention to detail.</p>
+          <h2 data-i18n="our_products">Our Products</h2>
+          <p data-i18n="products_intro">Explore our collection of handcrafted metal products. Each item is made with quality materials and attention to detail.</p>
         </div>
 
         <div class="product-filters">
-          <button class="filter-btn active" data-filter="all">All Products</button>
-          <button class="filter-btn" data-filter="trolleys">Trolleys</button>
-          <button class="filter-btn" data-filter="equipment">Equipment</button>
-          <button class="filter-btn" data-filter="custom">Custom Work</button>
+          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Products</button>
+          <button class="filter-btn" data-filter="trolleys" data-i18n="filter_trolleys">Trolleys</button>
+          <button class="filter-btn" data-filter="equipment" data-i18n="filter_equipment">Equipment</button>
+          <button class="filter-btn" data-filter="custom" data-i18n="filter_custom">Custom Work</button>
         </div>
 
         <div id="products-grid" class="products-grid">
@@ -61,27 +88,7 @@
         <div class="about-content">
           <div class="about-text">
             <h2>Why Choose Yashwant Engineering?</h2>
-            <ul class="features-list">
-              <li><strong>Quality Materials:</strong> We use only premium metals and materials</li>
-              <li><strong>Custom Design:</strong> Tailored solutions for your specific needs</li>
-              <li><strong>Expert Craftsmanship:</strong> Years of experience in metalworking</li>
-              <li><strong>Timely Delivery:</strong> Reliable service and quick turnaround</li>
-              <li><strong>Competitive Pricing:</strong> Value for money without compromising quality</li>
-            </ul>
-          </div>
-          <div class="about-stats">
-            <div class="stat-card">
-              <div class="stat-number">5+</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">100+</div>
-              <div class="stat-label">Products Delivered</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Happy Customers</div>
-            </div>
+            <p>We deliver reliable, handcrafted metal products with a focus on strength, durability and local support. Contact us for custom sizes and bulk pricing.</p>
           </div>
         </div>
       </section>
@@ -89,8 +96,28 @@
       <section id="contact" class="contact-section">
         <div class="contact-content">
           <div class="contact-info">
-            <h2>Ready to Order?</h2>
-            <p>Get in touch for custom quotes, bulk orders, or inquiries about our products.</p>
+            <h2 data-i18n="ready_order">Ready to Order?</h2>
+            <p data-i18n="contact_intro">Get in touch for custom quotes, bulk orders, or inquiries about our products.</p>
+            <div class="business-card">
+              <img src="img/businnesscard/b1.jpg" alt="Business card for Yashwant Engineering" class="business-card-img" />
+              <div class="business-card-text">
+                <h4>यशवंत इंजिनिअरिंग अँड वेल्डींग वर्क्स</h4>
+                <p><strong>संपर्क:</strong></p>
+                <ul>
+                  <li>संजय माळी — <a href="tel:+919960022128">9960022128</a></li>
+                  <li>संकेत माळी — <a href="tel:+919359813768">9359813768</a></li>
+                </ul>
+                <p><strong>Products / उत्पादक:</strong></p>
+                <ul>
+                  <li>ट्रॅक्टर ट्रॉली — Tractor Trolley</li>
+                  <li>द्राक्षबागेचा गाडा — Grapeyard Cart</li>
+                  <li>विटभट्टी सप्लाय गाडा — Brick Kiln Supply Cart</li>
+                  <li>मोटर सायकलचा गाडा — Motorcycle Cart</li>
+                </ul>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/yashwant__engineering_palus/" target="_blank" rel="noopener">@yashwant_engineering_palus</a></p>
+                <p><strong>Address:</strong><br> पलूस-तासगांव रोड, लाईफकेअर हॉस्पिटल समोर, पलूस, जि. सांगली, महाराष्ट्र</p>
+              </div>
+            </div>
             <div class="contact-details">
               <div class="contact-item">
                 <span class="contact-icon">📍</span>
@@ -116,40 +143,40 @@
             </div>
           </div>
           <form class="contact-form" id="contactForm">
-            <h3>Send us a Message</h3>
+            <h3 data-i18n="contact_send">Send us a Message</h3>
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Name *</label>
+                <label for="name" data-i18n="label_name">Name *</label>
                 <input type="text" id="name" name="name" required>
               </div>
               <div class="form-group">
-                <label for="email">Email *</label>
+                <label for="email" data-i18n="label_email">Email *</label>
                 <input type="email" id="email" name="email" required>
               </div>
             </div>
             <div class="form-group">
-              <label for="phone">Phone</label>
+              <label for="phone" data-i18n="label_phone">Phone</label>
               <input type="tel" id="phone" name="phone">
             </div>
             <div class="form-group">
-              <label for="product">Product Interest</label>
+              <label for="product" data-i18n="label_product">Product Interest</label>
               <select id="product" name="product">
                 <option value="">Select a product</option>
-                <option value="1pt">1 — Phalka Trolly</option>
-                <option value="2bt">2 — Box Trolly</option>
-                <option value="3tt">3 — Tal Trolly</option>
-                <option value="4pat">4 — Patte Trolly</option>
-                <option value="5k5p">5 — Khurt 5 Phane</option>
-                <option value="6k7p">6 — Khurut 7 Phane</option>
-                <option value="7gg">7 — Grapes Gada</option>
-                <option value="8vg">8 — Veetbatii Gada</option>
+                <option value="1pt" data-i18n="prod_1">1 — फाळका ट्रॉली (Phalka Trolly)</option>
+                <option value="2bt" data-i18n="prod_2">2 — बॉक्स ट्रॉली (Box Trolly)</option>
+                <option value="3tt" data-i18n="prod_3">3 — तळ ट्रॉली (Tal Trolly)</option>
+                <option value="4pat" data-i18n="prod_4">4 — पटी ट्रॉली (Patte Trolly)</option>
+                <option value="5k5p" data-i18n="prod_5">5 — खुरूट 5 फणी (Khurt 5 Phane)</option>
+                <option value="6k7p" data-i18n="prod_6">6 — खुरूट 7 फणी (Khurut 7 Phane)</option>
+                <option value="7gg" data-i18n="prod_7">7 — द्राक्षबागेचा गाडा (Grapes Gada)</option>
+                <option value="8vg" data-i18n="prod_8">8 — विटभट्टी सप्लाय गाडा (Veetbatii Gada)</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Message *</label>
               <textarea id="message" name="message" rows="4" required placeholder="Tell us about your requirements..."></textarea>
             </div>
-            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="submit" class="submit-btn" data-i18n="send_message">Send Message</button>
           </form>
         </div>
       </section>
@@ -160,7 +187,12 @@
       <div class="modal-content">
         <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
         <div class="modal-body">
-          <img id="modalImg" src="" alt="Product image" />
+          <div class="modal-slideshow">
+            <button id="modalPrev" class="slide-nav prev" aria-label="Previous image">‹</button>
+            <img id="modalImg" src="" alt="Product image" />
+            <button id="modalNext" class="slide-nav next" aria-label="Next image">›</button>
+            <div id="slideIndicators" class="slide-indicators" aria-hidden="true"></div>
+          </div>
           <div class="modal-info">
             <h3 id="modalTitle">Product Title</h3>
             <p id="modalDesc">Product description and details.</p>
