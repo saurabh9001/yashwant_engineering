@@ -1,13 +1,61 @@
 // Product data mapped to `img/<id>/` folders provided by the user
 const products = [
-  { id: 1, code: '1pt', name: "Phalka Trolly", category: "trolleys", image: "img/1pt/photo_6312248491190717653_y.jpg", size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 18000, priceHigh: 20000, description: '' },
-  { id: 2, code: '2bt', name: "Box Trolly", category: "trolleys", image: "img/2bt/photo_6312248491190717672_y.jpg", size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 17000, priceHigh: 19000, description: '' },
-  { id: 3, code: '3tt', name: "Tal Trolly", category: "trolleys", image: "img/3tt/photo_6312248491190717678_y.jpg", size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 16000, priceHigh: 18000, description: '' },
-  { id: 4, code: '4pat', name: "Patte Trolly", category: "trolleys", image: "img/4pat/photo_6312248491190717689_y.jpg", size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 12000, priceHigh: 16000, description: '' },
-  { id: 5, code: '5k5p', name: "Khurt 5 Phane", category: "trolleys", image: "img/5k5p/photo_6312248491190717700_y.jpg", size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 15000, priceHigh: 18000, description: '' },
-  { id: 6, code: '6k7p', name: "Khurut 7 Phane", category: "trolleys", image: "img/6k7p/photo_6312248491190717700_y.jpg", size: '3 x 5', color: 'Blue', quantity: 1, priceLow: 15000, priceHigh: 18000, description: '' },
-  { id: 7, code: '7gg', name: "Grapes Gada", category: "trolleys", image: "img/7gg/photo_6312248491190717716_y.jpg", size: '3 x 7', color: 'Blue', quantity: 1, priceLow: 10000, priceHigh: 12000, description: '' },
-  { id: 8, code: '8vg', name: "Veetbatii Gada", category: "trolleys", image: "img/8vg/photo_6312248491190717725_y.jpg", size: '3 x 8', color: 'Blue', quantity: 1, priceLow: 11000, priceHigh: 14000, description: '' }
+  { id: 1, code: '1pt', name: "Phalka Trolly", category: "trolleys", image: "img/1pt/photo_6312248491190717653_y.jpg", images: [
+      "img/1pt/photo_6312248491190717653_y.jpg",
+      "img/1pt/photo_6312248491190717654_y.jpg",
+      "img/1pt/photo_6312248491190717655_y.jpg",
+      "img/1pt/photo_6312248491190717656_y.jpg",
+      "img/1pt/photo_6312248491190717657_y.jpg",
+      "img/1pt/photo_6312248491190717658_y.jpg"
+    ], size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 18000, priceHigh: 20000, description: '' },
+  { id: 2, code: '2bt', name: "Box Trolly", category: "trolleys", image: "img/2bt/photo_6312248491190717672_y.jpg", images: [
+      "img/2bt/photo_6312248491190717672_y.jpg",
+      "img/2bt/photo_6312248491190717673_y.jpg",
+      "img/2bt/photo_6312248491190717674_y.jpg",
+      "img/2bt/photo_6312248491190717675_y.jpg",
+      "img/2bt/photo_6312248491190717676_y.jpg"
+    ], size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 17000, priceHigh: 19000, description: '' },
+  { id: 3, code: '3tt', name: "Tal Trolly", category: "trolleys", image: "img/3tt/photo_6312248491190717678_y.jpg", images: [
+      "img/3tt/photo_6312248491190717678_y.jpg",
+      "img/3tt/photo_6312248491190717679_y.jpg",
+      "img/3tt/photo_6312248491190717680_y.jpg",
+      "img/3tt/photo_6312248491190717681_y.jpg",
+      "img/3tt/photo_6312248491190717682_y.jpg"
+    ], size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 16000, priceHigh: 18000, description: '' },
+  { id: 4, code: '4pat', name: "Patte Trolly", category: "trolleys", image: "img/4pat/photo_6312248491190717689_y.jpg", images: [
+      "img/4pat/photo_6312248491190717689_y.jpg",
+      "img/4pat/photo_6312248491190717690_y.jpg",
+      "img/4pat/photo_6312248491190717691_y.jpg",
+      "img/4pat/photo_6312248491190717692_y.jpg"
+    ], size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 12000, priceHigh: 16000, description: '' },
+  { id: 5, code: '5k5p', name: "Khurt 5 Phane", category: "trolleys", image: "img/5k5p/photo_6312248491190717700_y.jpg", images: [
+      "img/5k5p/photo_6312248491190717700_y.jpg",
+      "img/5k5p/photo_6312248491190717701_y.jpg",
+      "img/5k5p/photo_6312248491190717702_y.jpg",
+      "img/5k5p/photo_6312248491190717703_y.jpg",
+      "img/5k5p/photo_6312248491190717704_y.jpg"
+    ], size: '6 x 4', color: 'Blue', quantity: 1, priceLow: 15000, priceHigh: 18000, description: '' },
+  { id: 6, code: '6k7p', name: "Khurut 7 Phane", category: "trolleys", image: "img/6k7p/photo_6312248491190717700_y.jpg", images: [
+      "img/6k7p/photo_6312248491190717700_y.jpg",
+      "img/6k7p/photo_6312248491190717701_y.jpg",
+      "img/6k7p/photo_6312248491190717702_y.jpg",
+      "img/6k7p/photo_6312248491190717703_y.jpg",
+      "img/6k7p/photo_6312248491190717704_y.jpg"
+    ], size: '3 x 5', color: 'Blue', quantity: 1, priceLow: 15000, priceHigh: 18000, description: '' },
+  { id: 7, code: '7gg', name: "Grapes Gada", category: "trolleys", image: "img/7gg/photo_6312248491190717716_y.jpg", images: [
+      "img/7gg/photo_6312248491190717716_y.jpg",
+      "img/7gg/photo_6312248491190717717_y.jpg",
+      "img/7gg/photo_6312248491190717718_y.jpg",
+      "img/7gg/photo_6312248491190717719_y.jpg",
+      "img/7gg/photo_6312248491190717720_y.jpg"
+    ], size: '3 x 7', color: 'Blue', quantity: 1, priceLow: 10000, priceHigh: 12000, description: '' },
+  { id: 8, code: '8vg', name: "Veetbatii Gada", category: "trolleys", image: "img/8vg/photo_6312248491190717725_y.jpg", images: [
+      "img/8vg/photo_6312248491190717725_y.jpg",
+      "img/8vg/photo_6312248491190717726_y.jpg",
+      "img/8vg/photo_6312248491190717727_y.jpg",
+      "img/8vg/photo_6312248491190717728_y.jpg",
+      "img/8vg/photo_6312248491190717729_y.jpg"
+    ], size: '3 x 8', color: 'Blue', quantity: 1, priceLow: 11000, priceHigh: 14000, description: '' }
 ];
 
 let currentFilter = 'all';
@@ -227,9 +275,17 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', handleFormSubmit);
   }
 
-  // Navigation smooth scrolling
-  document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', handleNavClick);
+  // modal slideshow controls (prev/next)
+  const modalPrevBtn = document.getElementById('modalPrev');
+  const modalNextBtn = document.getElementById('modalNext');
+  if (modalPrevBtn) modalPrevBtn.addEventListener('click', prevSlide);
+  if (modalNextBtn) modalNextBtn.addEventListener('click', nextSlide);
+
+  // keyboard navigation for modal slideshow + close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeProductModal();
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
   });
 
   // Mobile nav toggle
