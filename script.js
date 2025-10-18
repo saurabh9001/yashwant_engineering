@@ -23,7 +23,7 @@ function createProductCard(product) {
   card.setAttribute('data-category', product.category);
   card.innerHTML = `
     <div class="product-image">
-      <img src="trolly/${product.image}" alt="${product.name}" loading="lazy">
+      <img src="allimages/${product.image}" alt="${product.name}" loading="lazy">
     </div>
     <div class="product-info">
       <h3 class="product-title">${product.name}</h3>
@@ -64,7 +64,7 @@ function openProductModal(product) {
   const title = document.getElementById('modalTitle');
   const desc = document.getElementById('modalDesc');
 
-  img.src = `trolly/${product.image}`;
+  img.src = `allimages/${product.image}`;
   title.textContent = product.name;
   desc.textContent = product.description;
 
