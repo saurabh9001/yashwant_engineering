@@ -1,17 +1,13 @@
-// Product data with categories
+// Product data mapped to `img/<id>/` folders provided by the user
 const products = [
-  // Trolleys
-  { id: 1, name: "Heavy Duty Industrial Trolley", category: "trolleys", image: "IMG_8197.jpg", description: "Sturdy metal trolley designed for industrial use with heavy load capacity." },
-  { id: 2, name: "Custom Platform Trolley", category: "trolleys", image: "IMG_8190.jpg", description: "Custom-built platform trolley with reinforced frame and smooth wheels." },
-
-  // Equipment
-  { id: 3, name: "Metal Fabrication Frame", category: "equipment", image: "IMG_8106.jpg", description: "Custom metal frame for industrial equipment and machinery." },
-
-  // Custom Work
-  { id: 4, name: "Artisan Metal Sculpture", category: "custom", image: "IMG_4500.jpg", description: "Handcrafted metal sculpture with intricate design work." },
-
-  // Additional products
-  { id: 5, name: "Industrial Metal Structure", category: "equipment", image: "IMG_5785.jpg", description: "Large industrial metal structure with robust construction." }
+  { id: 1, name: "Phalka Trolly", category: "trolleys", image: "img/1pt/photo_6312248491190717653_y.jpg", description: "Size: 6 x 4 — Blue. Price: ₹18000 + ₹20000" },
+  { id: 2, name: "Box Trolly", category: "trolleys", image: "img/2bt/photo_6312248491190717672_y.jpg", description: "Size: 6 x 4 — Blue. Price: ₹17000 + ₹19000" },
+  { id: 3, name: "Tal Trolly", category: "trolleys", image: "img/3tt/photo_6312248491190717678_y.jpg", description: "Size: 6 x 4 — Blue. Price: ₹16000 + ₹18000" },
+  { id: 4, name: "Patte Trolly", category: "trolleys", image: "img/4pat/photo_6312248491190717689_y.jpg", description: "Size: 6 x 4 — Blue. Price: ₹12000 + ₹16000" },
+  { id: 5, name: "Khurt 5 Phane", category: "trolleys", image: "img/5k5p/photo_6312248491190717700_y.jpg", description: "Size: 6 x 4 — Blue. Price: ₹15000 + ₹18000" },
+  { id: 6, name: "Khurut 7 Phane", category: "trolleys", image: "img/6k7p/photo_6312248491190717700_y.jpg", description: "Size: 3 x 5 — Blue. Price: ₹15000 + ₹18000" },
+  { id: 7, name: "Grapes Gada", category: "trolleys", image: "img/7gg/photo_6312248491190717716_y.jpg", description: "Size: 3 x 7 — Blue. Price: ₹10000 + ₹12000" },
+  { id: 8, name: "Veetbatii Gada", category: "trolleys", image: "img/8vg/photo_6312248491190717725_y.jpg", description: "Size: 3 x 8 — Blue. Price: ₹11000 + ₹14000" }
 ];
 
 let currentFilter = 'all';
@@ -23,7 +19,7 @@ function createProductCard(product) {
   card.setAttribute('data-category', product.category);
   card.innerHTML = `
     <div class="product-image">
-      <img src="allimages/${product.image}" alt="${product.name}" loading="lazy">
+      <img src="${product.image}" alt="${product.name}" loading="lazy">
     </div>
     <div class="product-info">
       <h3 class="product-title">${product.name}</h3>
@@ -64,7 +60,7 @@ function openProductModal(product) {
   const title = document.getElementById('modalTitle');
   const desc = document.getElementById('modalDesc');
 
-  img.src = `allimages/${product.image}`;
+  img.src = product.image;
   title.textContent = product.name;
   desc.textContent = product.description;
 
