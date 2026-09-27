@@ -1,0 +1,7 @@
+.DS_Store
+# original phone photos (HEIC, ~150 MB) — web-size copies are in img/<code>/
+img/photos/
+# local backup of the previous site
+old-site/
+# third-party rate list used only as a layout reference
+*.pdf

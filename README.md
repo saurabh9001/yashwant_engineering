@@ -1,111 +1,53 @@
-# Yashwant Engineering — Product Showcase Website
+# Yashwant Engineering & Welding Works — Website
 
-This folder contains a modern, product-focused website for Yashwant Engineering (Palus) designed to showcase handcrafted metal products and connect with customers.
+Product website for यशवंत इंजिनिअरिंग अँड वेल्डींग वर्क्स, Palus (Sangli): tractor trolleys, farm carts, cultivators and cattle equipment.
 
-## Features
+Plain HTML/CSS/JS — no build step, no server code.
 
-- **Hero Section**: Eye-catching header with call-to-action and Instagram integration
-- **Product Gallery**: Interactive product showcase with category filtering
-- **Product Categories**: Filter by Trolleys, Equipment, and Custom Work
-- **Product Modal**: Detailed product view with descriptions and ordering links
-- **About Section**: Company highlights with key statistics and features
-- **Contact Section**: Professional contact form with product interest selection
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+## Files
 
-## Folder Structure
+| Path | What it is |
+|---|---|
+| `index.html` | Page layout and default (Marathi) text |
+| `styles.css` | All styling; colours are set at the top in `:root` |
+| `script.js` | Products list, translations (मराठी / हिन्दी / English), filters, photo viewer, WhatsApp enquiry form |
+| `img/<code>/` | Photos for each product (e.g. `img/2bt/` = Box Trolley) |
+| `img/store/` | Workshop photos used in the top banner |
+| `img/photos/` | Original phone photos (HEIC) — not used by the site directly |
+| `old-site/` | Copy of the previous version of the site |
 
-- `website/` — Website files (this folder)
-  - `index.html` — Main product showcase website
-  - `styles.css` — Modern styling with product-focused design
-  - `script.js` — Product filtering, modal, and contact form functionality
-- `trolly/` — Product photos (adjacent folder)
+## Common changes
 
-## Technical Features
+**Change a price, size or colour** — edit the product in the `products` list at the top of `script.js`. Set `priceLow`/`priceHigh` to `null` to show "call for price".
 
-- **Product Filtering**: Filter products by category (All, Trolleys, Equipment, Custom Work)
-- **Interactive Cards**: Click product cards to view detailed information
-- **Contact Form**: Enhanced form with product interest selection and validation
-- **Smooth Animations**: Hover effects and loading animations for better UX
-- **SEO Optimized**: Meta tags and semantic HTML for search engines
-- **Mobile-First**: Responsive design that works on all screen sizes
+**Add a product**
+1. Put its photos (JPG, about 1200px wide) in a new folder, e.g. `img/12xx/`.
+2. Copy an existing entry in `products` in `script.js` and change `code`, `category`, `name`, `desc`, `size`, `colors`, prices and `images`.
+3. `category` must be one of `trolleys`, `carts`, `implements`, `cattle`. Add `isNew: true` to show a "New" badge.
 
-## Product Categories
-
-- **Trolleys**: Industrial and custom-designed trolleys for various applications
-- **Equipment**: Metal fabrication frames, welding assemblies, and industrial components
-- **Custom Work**: Specialty metalwork, sculptures, and unique fabrication projects
-
-## Preview Locally
-
-From the `website/` folder run a static server:
+Convert iPhone HEIC photos on a Mac with:
 
 ```bash
-cd /Users/home/Desktop/yashwant/website
-python3 -m http.server 8000
-# Open http://localhost:8000 in your browser
+sips -s format jpeg -s formatOptions 75 -Z 1200 IMG_1234.HEIC --out img/12xx/IMG_1234.jpg
 ```
 
-## Image Optimization
+**Change the WhatsApp number** — `WHATSAPP_NUMBER` at the top of `script.js`, plus the `wa.me` / `tel:` links in `index.html`.
 
-All product images are stored in the `trolly/` folder and have been converted from HEIC to JPEG format for maximum browser compatibility and faster loading.
+**Change text** — every visible sentence has a key in `translations` in `script.js` (one block per language). The Marathi text in `index.html` is only shown before the script loads.
 
-## Customization Options
+## How enquiries work
 
-The website is designed for easy expansion:
+The contact form and every "Order on WhatsApp" button open WhatsApp with a pre-filled message (name, mobile, product) to 9960022128. Nothing is stored on a server.
 
-- **Add More Products**: Extend the products array in `script.js` with new items
-- **New Categories**: Add additional product categories and update filtering
-- **Pricing Integration**: Add price information to product cards
-- **E-commerce Features**: Integrate shopping cart and payment processing
-- **Product Search**: Add search functionality for large product catalogs
-- **Customer Reviews**: Add review system for products
+## Preview locally
 
-## Deployment Options
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
-- **GitHub Pages**: Free hosting with custom domain support
-- **Netlify/Vercel**: Modern hosting platforms with automatic deployments
-- **Traditional Hosting**: Upload to any web server with PHP support for form processing
-- **AWS/Azure**: Cloud hosting for enterprise-level scalability
+Or just double-click `index.html`.
 
-## Business Features
+## Deploy
 
-- **Instagram Integration**: Direct links to your Instagram for orders and inquiries
-- **Contact Form**: Captures customer interest and product preferences
-- **Professional Presentation**: Showcases craftsmanship and quality
-- **Lead Generation**: Forms collect potential customer information
-- **Mobile Optimized**: Customers can browse products on any device
-
-## Next Steps
-
-The website is now focused on product showcasing rather than general business information. Consider adding:
-
-- Product pricing and quote request system
-- Customer order tracking
-- Product customization options
-- Bulk order discounts
-- Delivery information
-- Warranty and support details
-
-The website effectively showcases your metalworking expertise and makes it easy for customers to discover and inquire about your products!
-- **Pricing Information**: Add price lists or quote request forms
-- **Blog/News Section**: Add company updates or industry news
-- **Online Store**: Integrate e-commerce functionality
-- **Multi-language Support**: Add language switching
-- **Analytics**: Add Google Analytics or similar tracking
-
-## Deployment
-
-- **GitHub Pages**: Push to a repository and enable Pages
-- **Netlify/Vercel**: Drag-and-drop deployment or connect repository
-- **Traditional Hosting**: Upload files to any web server
-
-## Next Steps
-
-Tell me what you'd like to add or modify:
-- Product detail pages with descriptions
-- Online ordering system
-- Customer portal
-- Admin dashboard
-- Mobile app companion
-
-The website is fully functional and professional-looking. Ready to showcase Yashwant Engineering's craftsmanship to potential customers!
+Upload the whole folder (except `img/photos/` and `old-site/`) to any static host — GitHub Pages, Netlify, or regular web hosting.
