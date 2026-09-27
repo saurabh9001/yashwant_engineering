@@ -174,7 +174,7 @@ def render(data):
       <div class="contacts">
         <span class="chip">📞 संजय माळी (Sanjay Mali) — <b>9960022128</b></span>
         <span class="chip">📞 संकेत माळी (Sanket Mali) — <b>9359813768</b></span>
-        <span class="chip">📷 <b>@yashwant__engineering_palus</b></span>
+        <span class="chip">📷 <b>@yashwant_engineering_palus</b></span>
       </div>
     </div>
   </header>

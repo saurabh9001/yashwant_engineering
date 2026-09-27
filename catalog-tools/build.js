@@ -159,7 +159,7 @@ const infoPanel = bar(LIGHT, [
   ] }),
   new Paragraph({ spacing: { before: 60 }, children: [
     run('📷 Instagram: ', { size: 19 }),
-    link('@yashwant__engineering_palus', 'https://www.instagram.com/yashwant__engineering_palus/', { color: '1765C1' }),
+    link('@yashwant_engineering_palus', 'https://www.instagram.com/yashwant_engineering_palus/', { color: '1765C1' }),
     run('     👍 Facebook: ', { size: 19 }),
     link('Yashwant Engineering', 'https://www.facebook.com/share/1Ew21nNqeK/', { color: '1765C1' }),
   ] }),

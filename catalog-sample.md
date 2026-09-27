@@ -9,7 +9,7 @@
 
 पलूस-तासगांव रोड, लाईफकेअर हॉस्पिटल समोर, पलूस, जि. सांगली, महाराष्ट्र - 416310 · Palus-Tasgaon Road, opp. Lifecare Hospital, Palus, Dist. Sangli, Maharashtra - 416310
 
-📞 संजय माळी (Sanjay Mali) — **[9960022128](tel:+919960022128)** &nbsp;|&nbsp; 📞 संकेत माळी (Sanket Mali) — **[9359813768](tel:+919359813768)** &nbsp;|&nbsp; Instagram **[@yashwant__engineering_palus](https://www.instagram.com/yashwant__engineering_palus/)** &nbsp;|&nbsp; Facebook **[Yashwant Engineering](https://www.facebook.com/share/1Ew21nNqeK/)**
+📞 संजय माळी (Sanjay Mali) — **[9960022128](tel:+919960022128)** &nbsp;|&nbsp; 📞 संकेत माळी (Sanket Mali) — **[9359813768](tel:+919359813768)** &nbsp;|&nbsp; Instagram **[@yashwant_engineering_palus](https://www.instagram.com/yashwant_engineering_palus/)** &nbsp;|&nbsp; Facebook **[Yashwant Engineering](https://www.facebook.com/share/1Ew21nNqeK/)**
 
 </div>
 
