@@ -5,3 +5,16 @@ img/photos/
 old-site/
 # third-party rate list used only as a layout reference
 *.pdf
+# PDF build cache
+.catalog-build/
+
+# catalog build tools (temporary files)
+catalog-tools/node_modules/
+catalog-tools/package-lock.json
+catalog-tools/.venv/
+catalog-tools/.build/
+catalog-tools/upright
+# share the finished catalog PDF
+!Yashwant-Engineering-Catalog.pdf
+# original photos (large)
+img/big dakala gada/
